@@ -7,25 +7,29 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-// Serve static assets directly from the project root folder
+// Serve static assets (CSS, JS, images) directly from the root folder
 app.use(express.static(__dirname));
 
-// Serve Late 2013 Landing Page
+// Function to serve the 2013 Landing Page
 const serveLandingPage = (req, res) => {
     const userCookie = req.cookies['.ROBLOSECURITY'];
 
     if (userCookie) {
         return res.redirect('/home');
     } else {
+        // Explicitly send Default.aspx when visiting the root or aspx URL
         return res.sendFile(path.join(__dirname, 'Landing', 'Animated', 'Default.aspx'));
     }
 };
 
+// Catch root route / and all case variations of Default.aspx
 app.get('/', serveLandingPage);
+app.get('/Default.aspx', serveLandingPage);
+app.get('/default.aspx', serveLandingPage);
 app.get('/Landing/Animated/Default.aspx', serveLandingPage);
 app.get('/landing/animated/default.aspx', serveLandingPage);
 
-// Login / Registration Form POST Handler
+// Login / Sign Up Form Submission
 app.post('/Login/v1', (req, res) => {
     const { username, password } = req.body;
     if (username && password) {
@@ -39,7 +43,7 @@ app.post('/Login/v1', (req, res) => {
     }
 });
 
-// Post-Login Home Page
+// Home page after login
 app.get('/home', (req, res) => {
     const userCookie = req.cookies['.ROBLOSECURITY'];
     if (!userCookie) {
@@ -52,36 +56,6 @@ app.get('/home', (req, res) => {
 app.get('/logout', (req, res) => {
     res.clearCookie('.ROBLOSECURITY');
     res.redirect('/');
-});
-
-// ==========================================
-// STUDIO & CLIENT ENDPOINTS
-// ==========================================
-
-app.get('/game/join.ashx', (req, res) => {
-    res.type('text/plain');
-    res.send(`
-        local client = game:GetService("NetworkClient")
-        local player = game:GetService("Players"):CreateLocalPlayer(1)
-        player:SetSuperSafeChat(false)
-        player.Name = "Player"
-        client:Connect("127.0.0.1", 53640, 0, 20)
-    `);
-});
-
-app.get('/ide/toolbox/items', (req, res) => {
-    res.type('application/json');
-    res.json({ "total": 0, "results": [] });
-});
-
-app.get('/asset', (req, res) => {
-    const assetId = req.query.id;
-    res.sendFile(path.join(__dirname, 'assets', `${assetId}.rbxm`));
-});
-
-app.get('/game/GetCurrentUser.ashx', (req, res) => {
-    res.type('text/plain');
-    res.send("1");
 });
 
 const PORT = process.env.PORT || 3000;
