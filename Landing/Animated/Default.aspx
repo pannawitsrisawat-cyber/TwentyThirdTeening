@@ -4,6 +4,7 @@
         <title>ROBLOX</title>
         
         <!-- Updated CSS Links to match your folder structure (CSS/Base/CSS/) -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="/CSS/Base/CSS/fetch.css"/>
         <link rel="stylesheet" href="/CSS/Base/CSS/Header.css"/>
         <link rel="stylesheet" href="/CSS/Base/CSS/Footer.css"/>
