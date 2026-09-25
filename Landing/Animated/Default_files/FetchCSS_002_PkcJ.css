@@ -1,0 +1,22 @@
+/* /CSS/Pages/Landing/Animated.css */
+html{background:#123f83;}#Body{background-color:transparent;}#Experimental{height:750px;width:800px;margin:auto;}.sign-up-container{float:right;}.site-header{display:none;}#animatedHeader{color:white;font-weight:bold;margin-bottom:25px;margin-top:-20px;text-align:center;width:900px;}#headerLogo{margin:auto;width:188px;}#headerLoginText a{float:right;margin-top:10px;letter-spacing:-1px;font-size:20px;color:white;text-decoration:none;}#headerTextTop{font-size:60px;letter-spacing:-2px;margin:auto;margin-top:8px;width:900px;white-space:nowrap;text-align:center;}#headerTextBottom{font-size:40px;width:900px;margin:auto;}#animatedBody{margin:auto;width:900px;height:509px;}.slogan-container{text-align:center;}#slogan{font-size:28px;color:white;font-weight:bold;letter-spacing:-1px;margin:auto;margin-top:10px;white-space:nowrap;}.Footer.Experimental{font-size:12px;}#Experimental .VideoContainer{float:right;margin-right:470px;}#animated-wrapper{float:left;margin-left:470px;position:absolute;*margin-top:-305px;*position:relative;background:url("/web/20131130234514im_/http://www.roblox.com/images/Landing/bluepixel.png");color:white;padding:20px 30px 20px 30px;}#animated-wrapper a{color:white;}#animated-wrapper a:visited{color:white;}
+/* ~/CSS/Pages/Accounts/AnimatedSignup.css */
+.animated-tab{font-size:18px;font-weight:normal;color:#9CF;cursor:pointer;}.animated-tab-selected{color:white;font-size:20px;font-weight:bold;}#login-footer{text-align:center;}#sign-up-title{color:white;font-weight:bold;font-size:20px;letter-spacing:0;white-space:nowrap;}.sign-up-row{margin-bottom:5px;}.sign-up-inner-row{margin-bottom:3px;width:240px;}.sign-up-description{font-size:12px;font-weight:normal;}#lstMonths{width:95px;}#lstDays{width:55px;margin-left:10px;}#lstYears{width:65px;margin-left:10px;}.error{color:#FF7373;}.required-text{float:right;}.good-text{float:right;color:#DAFF7F;}#password,#passwordConfirm,#username,#loginUsername,#loginPassword{width:235px;}.btn-large{width:215px;}#birthdayError{float:right;left:0;}
+/* /CSS/Pages/LandingSignUp.css */
+#Header{margin:0 auto;color:White;font-weight:bold;width:900px;text-align:center;}#Header a,#Header a:visited,#Header a:active{text-decoration:none;}#Header a:hover{text-decoration:none;}#Header .Navigation{clear:both;background-color:#6e99c9;color:#fff;font-size:12pt;font-weight:normal;line-height:2em;text-decoration:none;}#Header{position:absolute;bottom:0;text-align:left;}#Header .AlertSpace a:active{text-decoration:none;}#Experimental .CreateAccountWrapper{margin:17px 0 0 -89px;}.Footer{width:970px;margin:0 auto;padding:10px 0;color:Black;text-align:center;}.Footer.Experimental{background-color:#123f83;color:#899fc1;width:100%;}.Experimental a{color:white;}div.Experimental p.Legalese{font-size:10px;padding:0;line-height:20px;}.FooterContent{width:935px;margin:0 auto;}.FooterParagraph{float:left;margin-top:31px;color:#899fc1;}.FooterLegaleseContainer{float:right;width:715px;padding:10px 0 10px 20px;text-align:left;border-left:1px solid #335d99;}#Experimental .title{text-align:left;margin:0 0 20px 20px;}#Experimental .SignupWrapper{float:right;width:525px;padding-bottom:10px;padding-left:9px;}#Experimental .VideoSubtitle{margin-top:0;}#Experimental .VideoContainer{float:left;display:inline;padding:0 5px;width:381px;}#Experimental .Content{min-height:252px;padding:8px 8px 8px 8px;margin-bottom:0;border-bottom:none;}.valid-container{left:2px;}#Experimental .SignupWrapper h1{margin:0 0 10px 20px;}
+
+/*
+     FILE ARCHIVED ON 23:45:14 Nov 30, 2013 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 07:48:46 Sep 25, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  capture_cache.get: 2.293
+  load_resource: 254.299 (2)
+  PetaboxLoader3.resolve: 194.991 (2)
+  PetaboxLoader3.datanode: 57.591 (2)
+*/

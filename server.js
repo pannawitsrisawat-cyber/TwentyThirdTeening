@@ -3,34 +3,29 @@ const cookieParser = require('cookie-parser');
 const path = require('path');
 const app = express();
 
-// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-// Serve static assets from website/ (CSS, JS, images, subfolders)[cite: 8, 9]
-app.use(express.static(path.join(__dirname, 'website')));
+// Serve static assets directly from the project root folder
+app.use(express.static(__dirname));
 
-// ==========================================
-// WEBSITE & AUTH ROUTES
-// ==========================================
-
-// Check cookie on root URL
-app.get('/', (req, res) => {
+// Serve Late 2013 Landing Page
+const serveLandingPage = (req, res) => {
     const userCookie = req.cookies['.ROBLOSECURITY'];
+
     if (userCookie) {
         return res.redirect('/home');
     } else {
-        return res.redirect('/login');
+        return res.sendFile(path.join(__dirname, 'Landing', 'Animated', 'Default.aspx'));
     }
-});
+};
 
-// Login Page[cite: 8]
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, 'website', 'login.html'));
-});
+app.get('/', serveLandingPage);
+app.get('/Landing/Animated/Default.aspx', serveLandingPage);
+app.get('/landing/animated/default.aspx', serveLandingPage);
 
-// Process Login Form[cite: 8]
+// Login / Registration Form POST Handler
 app.post('/Login/v1', (req, res) => {
     const { username, password } = req.body;
     if (username && password) {
@@ -44,26 +39,25 @@ app.post('/Login/v1', (req, res) => {
     }
 });
 
-// Home Page[cite: 8]
+// Post-Login Home Page
 app.get('/home', (req, res) => {
     const userCookie = req.cookies['.ROBLOSECURITY'];
     if (!userCookie) {
-        return res.redirect('/login');
+        return res.redirect('/');
     }
-    res.sendFile(path.join(__dirname, 'website', 'home.html'));
+    res.send("<h1>Welcome to TwentyThirdTeening!</h1><p>Logged in successfully.</p><a href='/logout'>Logout</a>");
 });
 
-// Logout[cite: 8]
+// Logout
 app.get('/logout', (req, res) => {
     res.clearCookie('.ROBLOSECURITY');
-    res.redirect('/login');
+    res.redirect('/');
 });
 
 // ==========================================
-// CLIENT & STUDIO ENDPOINTS
+// STUDIO & CLIENT ENDPOINTS
 // ==========================================
 
-// Client Join Script[cite: 8]
 app.get('/game/join.ashx', (req, res) => {
     res.type('text/plain');
     res.send(`
@@ -75,48 +69,20 @@ app.get('/game/join.ashx', (req, res) => {
     `);
 });
 
-// Studio Toolbox Catalog[cite: 8]
 app.get('/ide/toolbox/items', (req, res) => {
     res.type('application/json');
-    res.json({
-        "total": 2,
-        "results": [
-            {
-                "id": 1,
-                "name": "Spawn Location",
-                "assetTypeId": 10,
-                "url": "http://twentythirdteening.onrender.com/asset?id=1"
-            },
-            {
-                "id": 2,
-                "name": "Brick",
-                "assetTypeId": 10,
-                "url": "http://twentythirdteening.onrender.com/asset?id=2"
-            }
-        ]
-    });
+    res.json({ "total": 0, "results": [] });
 });
 
-// Deliver Asset Files (.rbxm)[cite: 8]
 app.get('/asset', (req, res) => {
     const assetId = req.query.id;
-    const filePath = path.join(__dirname, 'assets', `${assetId}.rbxm`);
-
-    res.sendFile(filePath, (err) => {
-        if (err) {
-            res.status(404).send('Asset not found');
-        }
-    });
+    res.sendFile(path.join(__dirname, 'assets', `${assetId}.rbxm`));
 });
 
-// Studio User Auth Check[cite: 8]
 app.get('/game/GetCurrentUser.ashx', (req, res) => {
     res.type('text/plain');
     res.send("1");
 });
 
-// ==========================================
-// START SERVER (MUST BE AT THE VERY BOTTOM)
-// ==========================================
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
