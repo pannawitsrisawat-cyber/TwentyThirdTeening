@@ -23,8 +23,8 @@ a:hover {
 
 /* Header Navigation Bar */
 .site-header {
-    background-color: #0055b3;
-    height: 40px;
+    background: url('../images/RevisedHeader/bg-rbx_header.png') repeat-x top left;
+    height: 42px;
     width: 100%;
 }
 
@@ -41,8 +41,12 @@ a:hover {
     display: block;
     width: 118px;
     height: 30px;
-    background: url('../images/btn-rbx_logo.png') no-repeat center/contain;
+    background: url('../images/RevisedHeader/btn-rbx_logo.png') no-repeat 0 0;
     margin-right: 15px;
+}
+
+.btn-logo:hover {
+    background-position: 0 -30px;
 }
 
 #navigation-menu ul {
