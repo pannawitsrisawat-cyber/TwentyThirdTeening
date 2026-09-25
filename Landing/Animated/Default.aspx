@@ -3,18 +3,18 @@
     <head>
         <title>ROBLOX</title>
         
-        <!-- Local Stylesheets -->
-        <link rel="stylesheet" href="/CSS/Base/CSS/FetchCSS?path=reset___90041b2af2fb6b9b7864ee66001ba812_m.css"/>
-        <link rel="stylesheet" href="/CSS/Base/CSS/FetchCSS?path=main___7bc33955457be707d2b9680b999ea4db_m.css"/>
-        <link rel="stylesheet" href="/CSS/Base/CSS/FetchCSS?path=page___c4052da17b2fbf387bdc8154a0bb3388_m.css"/>
-        <link rel="stylesheet" type="text/css" href="/CSS/PartialViews/Navigation.css">
+        <!-- Updated Local Stylesheets (direct root references) -->
+        <link rel="stylesheet" href="/CSS/reset.css"/>
+        <link rel="stylesheet" href="/CSS/main.css"/>
+        <link rel="stylesheet" href="/CSS/page.css"/>
+        <link rel="stylesheet" type="text/css" href="/CSS/Navigation.css">
         <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico"/>
 
-        <!-- jQuery and Microsoft AJAX -->
-        <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js"></script>
-        <script type="text/javascript">window.jQuery || document.write("<script type='text/javascript' src='/js/jquery/jquery-1.7.2.min.js'><\/script>")</script>
-        <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/4.0/1/MicrosoftAjax.js"></script>
-        <script type="text/javascript">window.Sys || document.write("<script type='text/javascript' src='/js/Microsoft/MicrosoftAjax.js'><\/script>")</script>
+        <!-- jQuery and Microsoft AJAX CDN with local fallback -->
+        <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript">window.jQuery || document.write("<script type='text/javascript' src='/js/jquery-1.7.2.min.js'><\/script>")</script>
+        <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/4.0/1/MicrosoftAjax.js"></script>
+        <script type="text/javascript">window.Sys || document.write("<script type='text/javascript' src='/js/MicrosoftAjax.js'><\/script>")</script>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge,requiresActiveX=true"/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -30,16 +30,13 @@
                     <a href="/" class="btn-logo" data-se="nav-logo"></a>
                     <div id="header-login-container">
                         <div id="header-login-wrapper" class="iframe-login-signup">
-                            <a id="header-signup" href="/Landing/Animated/Default.aspx">Sign Up</a>
+                            <a id="header-signup" href="#">Sign Up</a>
                             <span id="header-or">or</span>
                             <span id="login-span">
-                                <a id="header-login" class="btn-control btn-control-large">Login <span class="grey-arrow">▼</span></a>
+                                <a id="header-login" class="btn-control btn-control-large" href="#">Login <span class="grey-arrow">▼</span></a>
                             </span>
-                            <div id="iFrameLogin" style="display:none">
-                                <iframe class="login-frame" src="/Login/iFrameLogin.aspx" scrolling="no" frameborder="0"></iframe>
-                            </div>
                         </div>
-                    </div>	
+                    </div>    
                 </div>
             </div>  
             <div style="clear:both"></div>
@@ -73,6 +70,9 @@
                     #Container {
                         background: url("http://images.rbxcdn.com/161d0d393d74c103e5f50eef988b7217.png") repeat-x;
                     }
+                    .animated-tab {
+                        cursor: pointer;
+                    }
                 </style>
                 <div id="Experimental" class="ShadowedStandardBox" data-is-animated="False">
                     <div class="Content">
@@ -84,7 +84,8 @@
                         <div id="animatedBodyWrapper">
                             <div id="animatedBody">
                                 <div class="VideoContainer">
-                                    <iframe width="380" height="250" src="https://www.youtube.com/embed/_ju7mb634B0?autoplay=1&controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+                                    <!-- Updated with public working 2013 trailer -->
+                                    <iframe width="380" height="250" src="https://www.youtube.com/embed/3990OsnR6eE" frameborder="0" allowfullscreen></iframe>
                                     <div class="slogan-container">
                                         <div id="slogan">What will you build?</div>
                                     </div>
@@ -126,7 +127,7 @@
                                                 <a href="/Login/ResetPasswordRequest.aspx">Forgot your username/password?</a>
                                             </div>
                                             <div>
-                                                Don't have an account? <a href="#" onclick="$('#animated-tab-signup').click();"> Sign up</a>
+                                                Don't have an account? <a href="#" id="switch-to-signup"> Sign up</a>
                                             </div>
                                         </div>
                                     </div>
@@ -191,5 +192,30 @@
                 </div>
             </div>
         </div> 
+
+        <!-- Script for Tab Toggling -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                function showLogin() {
+                    $('#animated-signup').hide();
+                    $('#animated-login').show();
+                }
+
+                function showSignup() {
+                    $('#animated-login').hide();
+                    $('#animated-signup').show();
+                }
+
+                $('#animated-tab-login, #header-login').click(function(e) {
+                    e.preventDefault();
+                    showLogin();
+                });
+
+                $('#animated-tab-signup, #header-signup, #switch-to-signup').click(function(e) {
+                    e.preventDefault();
+                    showSignup();
+                });
+            });
+        </script>
     </body>
 </html>
