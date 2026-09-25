@@ -3,11 +3,11 @@
     <head>
         <title>ROBLOX</title>
         
-        <!-- Updated Local Stylesheets (direct root references) -->
-        <link rel="stylesheet" href="/CSS/reset.css"/>
-        <link rel="stylesheet" href="/CSS/main.css"/>
-        <link rel="stylesheet" href="/CSS/page.css"/>
-        <link rel="stylesheet" type="text/css" href="/CSS/Navigation.css">
+        <!-- Updated CSS Links to match your folder structure (CSS/Base/CSS/) -->
+        <link rel="stylesheet" href="/CSS/Base/CSS/fetch.css"/>
+        <link rel="stylesheet" href="/CSS/Base/CSS/Header.css"/>
+        <link rel="stylesheet" href="/CSS/Base/CSS/Footer.css"/>
+        <link rel="stylesheet" href="/CSS/Base/CSS/Frontpage.css"/>
         <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico"/>
 
         <!-- jQuery and Microsoft AJAX CDN with local fallback -->
