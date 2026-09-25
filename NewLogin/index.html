@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,requiresActiveX=true"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Language" content="en-us"/>
+    <meta name="author" content="ROBLOX Corporation"/>
+    <meta name="description" content="User-generated MMO gaming site for kids, teens, and adults. Players architect their own worlds. Builders create free online games that simulate the real world. Create and play amazing 3D games."/>
+    <meta name="keywords" content="free games, online games, building games, virtual worlds, free mmo, gaming cloud, physics engine"/>
+
+    <title>ROBLOX.com</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico"/>
+    
+    <!-- Local CSS Files -->
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <!-- Core Scripts -->
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write("<script type='text/javascript' src='js/jquery-1.7.2.min.js'><\/script>")</script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/4.0/1/MicrosoftAjax.js"></script>
+    <script type="text/javascript">window.Sys || document.write("<script type='text/javascript' src='js/MicrosoftAjax.js'><\/script>")</script>
+
+    <script type="text/javascript">
+        var Roblox = Roblox || {};
+        Roblox.UpsellAdModal = Roblox.UpsellAdModal || {};
+        Roblox.UpsellAdModal.Resources = {
+            title: "Remove Ads Like This",
+            body: "Builders Club members do not see external ads like these.",
+            accept: "Upgrade Now",
+            decline: "No, thanks"
+        };
+    </script>
+    <script type="text/javascript">
+        Roblox.FixedUI = Roblox.FixedUI || {};
+        Roblox.FixedUI.gutterAdsEnabled = false;
+    </script>   
+</head>
+<body>
+    
+<div id="fb-root"></div>
+<div id="MasterContainer">
+
+    <div>
+        <div class="site-header">
+            <div id="navigation-container">
+                <a href="Default.aspx" class="btn-logo" data-se="nav-logo"></a>
+                <div id="navigation-menu">
+                    <ul>
+                        <li><a href="home.html" ref="nav-myroblox" data-se="nav-myhome">Home</a></li>
+                        <li><a data-se="nav-games" href="games.html" ref="nav-games" title="Games">Games</a></li>
+                        <li><a data-se="nav-catalog" href="Catalog.html" ref="nav-catalog" title="Catalog">Catalog</a></li>
+                        <li><a data-se="nav-develop" href="develop.html" title="Develop" ref="nav-develop">Develop</a></li>
+                        <li><a data-se="nav-upgrade" href="Upgrades/BuildersClubMemberships.aspx" title="Upgrade" ref="nav-buildersclub">Upgrade</a></li>
+                        <li><a data-se="nav-forum" href="Forum/Default.aspx" title="Forum" ref="nav-forum">Forum</a></li>
+                        <li class="more-list-item" drop-down-nav-button="more-list-item">
+                            <div class="more-link-container">
+                                <a id="nav-more" title="More" data-se="nav-more" ref="nav-more">More<span id="more-menu-toggle"></span></a> 
+                            </div>
+                            <div class="dropdownnavcontainer" style="display:none;" drop-down-nav-container="more-list-item">
+                                <div class="dropdownmainnav" style="z-index:1023">
+                                    <a class="dropdownoption" data-se="nav-more-browse" href="Browse.aspx" title="People" ref="nav-people"><span>People</span></a>
+                                    <a class="dropdownoption" data-se="nav-more-blog" href="http://blog.roblox.com/" title="Blog" ref="nav-news"><span>Blog</span></a>
+                                    <a class="dropdownoption" data-se="nav-more-help" href="Help/Builderman.aspx" title="Help" ref="nav-help"><span>Help</span></a>
+                                    <div style="clear:both;"></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="header-login-container">
+                    <div id="header-login-wrapper" class="iframe-login-signup" data-display-opened="">
+                        <a id="header-signup" href="Login/NewAge.aspx">Sign Up</a>
+                        <span id="header-or">or</span>
+                        <span id="login-span">
+                            <a id="header-login" class="btn-control btn-control-large">Login <span class="grey-arrow">▼</span></a>
+                        </span>
+                        <div id="iFrameLogin" style="display:none">
+                            <iframe class="login-frame" src="Login/iFrameLogin.aspx?loginRedirect=False&amp;parentUrl=/NewLogin" scrolling="no" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $(function () {
+                $('.more-list-item').bind('showDropDown', function () {
+                    var maxWidth = $('#navigation-menu .dropdownnavcontainer').width();
+                    $('a.dropdownoption span').each(function (index, elem) {
+                        elem = $(elem);
+                        if (elem.outerWidth() > maxWidth) {
+                            maxWidth = elem.outerWidth();
+                        }
+                    });
+                    maxWidth = maxWidth + 5;
+                    $('#navigation-menu .dropdownoption').each(function (index, elem) {
+                        elem = $(elem);
+                        if (elem.width() < maxWidth) {
+                            elem.width(maxWidth);
+                        }
+                    });
+                });
+            });
+        </script>
+
+        <div class="forceSpace">&nbsp;</div>
+        <noscript><div class="SystemAlert"><div class="SystemAlertText">Please enable Javascript to use all the features on this site.</div></div></noscript>
+        
+        <div id="BodyWrapper">
+            <div id="RepositionBody">
+                <div id="Body" style="width:970px">
+                    
+                    <!--[if IE 7]>
+                    <style>        
+                        #signInButtonPanel a 
+                        {
+                            margin-right: 143px;
+                        }
+                    </style>
+                    <![endif]-->
+                    
+                    <h1>Login to ROBLOX</h1>
+                    <div>
+                        <form action="newlogin" id="loginForm" method="post">
+                            <div id="loginarea" class="divider-bottom">
+                                <div id="leftArea">
+                                    <div id="loginPanel">   
+                                        <table id="logintable">
+                                            <tr id="username">
+                                                <td><label class="form-label" for="Username">Username:</label></td>
+                                                <td><input class="text-box text-box-medium" data-val="true" data-val-required="The Username field is required." id="Username" name="Username" type="text" value=""/></td>
+                                            </tr>
+                                            <tr id="password">
+                                                <td><label class="form-label" for="Password">Password:</label></td>
+                                                <td><input class="text-box text-box-medium" data-val="true" data-val-required="The Password field is required." id="Password" name="Password" type="password"/></td>
+                                            </tr>
+                                        </table>
+                                        <div>
+                                            <div id="forgotPasswordPanel">
+                                                <a class="text-link" href="Login/ResetPasswordRequest.aspx" target="_blank">Forgot your password?</a>
+                                            </div>
+                                            <div id="signInButtonPanel">
+                                                <a roblox-js-onclick class="btn-medium btn-neutral">Sign In</a>
+                                                <a roblox-js-oncancel class="btn-medium btn-negative">Cancel</a>
+                                            </div>
+                                            <div class="clearFloats"></div>
+                                        </div>
+                                        <span id="fb-root">
+                                            <div id="SplashPageConnect" class="fbSplashPageConnect">
+                                                <a class="facebook-login" href="Facebook/SignIn?returnTo=/home" ref="form-facebook">
+                                                    <span class="left"></span>
+                                                    <span class="middle">Login with Facebook<span>Login with Facebook</span></span>
+                                                    <span class="right"></span>
+                                                </a>       
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div id="rightArea" class="divider-left">
+                                    <div id="signUpPanel" class="FrontPageLoginBox">
+                                        <p class="text">Not a member?</p>
+                                        <h2>Sign Up to Build &amp; Make Friends</h2>
+                                        <p class="text">What is your birthday?</p>
+                                        <select id="MonthSelect" class="form-select" name="Month">
+                                            <option>Month</option>
+                                        </select>
+                                        <select id="DaySelect" class="form-select" name="Day">
+                                            <option>Day</option>
+                                        </select>
+                                        <select id="YearSelect" class="form-select" name="Year">
+                                            <option>Year</option>
+                                        </select>
+                                        <p class="footnote" id="disclaimer">Your birthday will not be given out to any third party!</p>
+                                        <a roblox-js-onsignup class="btn-medium btn-primary">Sign Up</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <input id="ReturnUrl" name="ReturnUrl" type="hidden" value=""/>
+                        </form>
+                    </div>
+
+                    <div id="guestarea">
+                        <h2>You don't need an account to play ROBLOX</h2>
+                        <br/>
+                        <p class="text">You can start playing right now, in guest mode! <a href="games.html" class="btn-small btn-neutral" id="guestButton">Play as Guest</a></p>
+                    </div>
+
+                    <div style="clear:both"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Footer" class="footer-container">
+            <div class="FooterNav">
+                <a href="info/Privacy.aspx">Privacy Policy</a>
+                &nbsp;|&nbsp; 
+                <a href="http://corp.roblox.com/advertise-on-roblox">Advertise with Us</a>
+                &nbsp;|&nbsp; 
+                <a href="http://corp.roblox.com/roblox-press">Press</a>
+                &nbsp;|&nbsp; 
+                <a href="http://corp.roblox.com/contact-us">Contact Us</a>
+                &nbsp;|&nbsp;
+                <a href="http://corp.roblox.com/">About Us</a>
+                &nbsp;|&nbsp;
+                <a href="http://blog.roblox.com/">Blog</a>
+                &nbsp;|&nbsp;
+                <a href="http://corp.roblox.com/jobs">Jobs</a>
+                &nbsp;|&nbsp;
+                <a href="Parents.aspx">Parents</a>
+                &nbsp;|&nbsp;
+                <a href="http://shop.roblox.com/">Shop</a>
+            </div>
+            <div class="FooterNav">
+                <div id="SEOGenreLinks" class="SEOGenreLinks">
+                    <a href="all-games.html">All Games</a> <span>|</span>
+                    <a href="building-games.html">Building</a> <span>|</span>
+                    <a href="horror-games.html">Horror</a> <span>|</span>
+                    <a href="town-and-city-games.html">Town and City</a> <span>|</span>
+                    <a href="military-games.html">Military</a> <span>|</span>
+                    <a href="comedy-games.html">Comedy</a> <span>|</span>
+                    <a href="medieval-games.html">Medieval</a> <span>|</span>
+                    <a href="adventure-games.html">Adventure</a> <span>|</span>
+                    <a href="sci-fi-games.html">Sci-Fi</a> <span>|</span>
+                    <a href="naval-games.html">Naval</a> <span>|</span>
+                    <a href="fps-games.html">FPS</a> <span>|</span>
+                    <a href="rpg-games.html">RPG</a> <span>|</span>
+                    <a href="sports-games.html">Sports</a> <span>|</span>
+                    <a href="fighting-games.html">Fighting</a> <span>|</span>
+                    <a href="western-games.html">Western</a>
+                </div>
+            </div>
+            <div class="legal">
+                <div class="right">
+                    <p class="Legalese">
+                        ROBLOX, "Online Building Toy", characters, logos, names, and all related indicia are trademarks of ROBLOX Corporation, ©2013. Patents pending.
+                        Use of this site signifies your acceptance of the <a href="info/terms-of-service">Terms and Conditions</a>.
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ChatContainer" style="position:fixed;bottom:0;right:0;z-index:1000;"></div>
+
+</body>
+</html>
