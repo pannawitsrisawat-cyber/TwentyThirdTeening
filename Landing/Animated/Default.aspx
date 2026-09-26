@@ -5,10 +5,14 @@
         
         <!-- Updated CSS Links to match your folder structure (CSS/Base/CSS/) -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/CSS/Base/CSS/fetch.css"/>
-        <link rel="stylesheet" href="/CSS/Base/CSS/Header.css"/>
-        <link rel="stylesheet" href="/CSS/Base/CSS/Footer.css"/>
-        <link rel="stylesheet" href="/CSS/Base/CSS/Frontpage.css"/>
+        <link rel="stylesheet" href="https://twentythirdteening.onrender.com/Landing/Animated/css/fetch.css"/>
+        <link rel="stylesheet" href="https://twentythirdteening.onrender.com/Landing/Animated/css/banner-styles.css"/>
+        <link rel="stylesheet" href="https://twentythirdteening.onrender.com/Landing/Animated/css/iconochive.css""/>
+        <link rel="stylesheet" href="https://twentythirdteening.onrender.com/Landing/Animated/css/Navigation.css""/>
+        <link rel="stylesheet" href="https://twentythirdteening.onrender.com/Landing/Animated/css/1/fetch.css"/>
+        <link rel="stylesheet" href="https://twentythirdteening.onrender.com/Landing/Animated/css/1.css"/>
+        <link rel="stylesheet" href="https://twentythirdteening.onrender.com/Landing/Animated/css/2.css""/>
+        <link rel="stylesheet" href="https://twentythirdteening.onrender.com/Landing/Animated/css/3.css""/>
         <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico"/>
 
         <!-- jQuery and Microsoft AJAX CDN with local fallback -->
