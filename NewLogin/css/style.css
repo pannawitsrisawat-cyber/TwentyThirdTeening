@@ -1,12 +1,15 @@
+/* Import ฟอนต์ Builder Sans จาก CDN */
+@import url('https://fonts.cdnfonts.com/css/builder-sans');
+
 /* Reset & Base Styles */
 * {
-    box-sizing: border-box;
+    box-sizing: content-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-family: 'Builder Sans', Arial, Helvetica, sans-serif;
     font-size: 12px;
     color: #333;
     background-color: #fff;
@@ -24,86 +27,97 @@ a:hover {
 /* Header Navigation Bar */
 .site-header {
     background: url('../images/RevisedHeader/bg-rbx_header.png') repeat-x top left;
-    height: 42px;
+    height: 40px;
     width: 100%;
 }
 
 #navigation-container {
     width: 970px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    height: 100%;
+    height: 40px;
     position: relative;
 }
 
 .btn-logo {
     display: block;
+    float: left;
     width: 118px;
     height: 30px;
     background: url('../images/RevisedHeader/btn-rbx_logo.png') no-repeat 0 0;
-    margin-right: 15px;
+    margin-top: 5px;
+    margin-right: 10px;
 }
 
 .btn-logo:hover {
     background-position: 0 -30px;
 }
 
+#navigation-menu {
+    float: left;
+}
+
 #navigation-menu ul {
     list-style: none;
-    display: flex;
+}
+
+#navigation-menu li {
+    float: left;
 }
 
 #navigation-menu li a {
     color: #fff;
     font-weight: bold;
-    font-size: 13px;
-    padding: 10px 12px;
+    font-size: 11px;
+    padding: 13px 10px;
     display: block;
+    line-height: 1;
 }
 
 #navigation-menu li a:hover {
-    background-color: #004088;
+    background-color: #003366;
     text-decoration: none;
 }
 
 #header-login-container {
-    margin-left: auto;
+    float: right;
     color: #fff;
+    padding-top: 8px;
+    font-size: 11px;
 }
 
 #header-signup {
     color: #fff;
     font-weight: bold;
-    margin-right: 5px;
 }
 
 #header-or {
-    margin-right: 5px;
     color: #ccc;
+    padding: 0 3px;
 }
 
 #header-login {
-    background-color: #fff;
-    color: #333;
-    padding: 3px 10px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
+    background-color: #e1e1e1;
+    color: #000;
+    padding: 3px 8px;
+    border: 1px solid #777;
     font-weight: bold;
     cursor: pointer;
+    font-size: 11px;
 }
 
 /* Page Body Layout */
 #BodyWrapper {
     width: 970px;
-    margin: 20px auto 40px auto;
+    margin: 15px auto 0 auto;
+    text-align: left;
 }
 
 h1 {
-    font-size: 26px;
-    font-weight: normal;
+    font-size: 24px;
+    font-weight: bold;
     color: #333;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+    font-family: 'Builder Sans', Arial, Helvetica, sans-serif;
 }
 
 h2 {
@@ -111,67 +125,65 @@ h2 {
     font-weight: normal;
     color: #333;
     margin-bottom: 10px;
+    font-family: 'Builder Sans', Arial, Helvetica, sans-serif;
 }
 
 /* Main Split Area */
 #loginarea {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 /* Top Login Form */
 #leftArea {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 25px;
-}
-
-#logintable {
     margin-bottom: 15px;
 }
 
+#logintable {
+    margin: 0 auto 10px auto;
+}
+
 #logintable td {
-    padding: 5px;
+    padding: 3px 5px;
+    vertical-align: middle;
 }
 
 .form-label {
     font-weight: bold;
     text-align: right;
     display: block;
-    width: 80px;
+    font-size: 12px;
 }
 
 .text-box {
-    width: 200px;
-    padding: 4px;
-    border: 1px solid #7f9db9;
+    width: 190px;
+    padding: 3px;
+    border: 1px solid #a7a6aa;
+    font-size: 12px;
 }
 
 #signInButtonPanel {
-    margin-top: 10px;
+    width: 320px;
+    margin: 0 auto;
     text-align: right;
-    width: 290px;
+}
+
+#forgotPasswordPanel {
+    float: left;
+    padding-top: 5px;
+    padding-left: 55px;
 }
 
 /* Custom Roblox Buttons */
-.btn-neutral, .btn-primary, .btn-negative {
-    display: inline-block;
-    padding: 6px 16px;
+.btn-neutral, #signInButtonPanel .btn-neutral {
+    background: #0055b3;
     color: #fff;
     font-weight: bold;
-    border-radius: 3px;
+    padding: 6px 14px;
+    border: 1px solid #002d62;
+    font-size: 13px;
     cursor: pointer;
-    text-align: center;
-    border: none;
-}
-
-.btn-neutral, #signInButtonPanel .btn-neutral {
-    background-color: #0055b3;
-    border: 1px solid #004088;
+    display: inline-block;
 }
 
 .btn-neutral:hover {
@@ -180,10 +192,14 @@ h2 {
 }
 
 .btn-primary {
-    background-color: #008a00;
-    border: 1px solid #006600;
+    background: #008a00;
+    color: #fff;
+    font-weight: bold;
+    padding: 6px 18px;
+    border: 1px solid #004d00;
     font-size: 14px;
-    padding: 8px 20px;
+    cursor: pointer;
+    display: inline-block;
 }
 
 .btn-primary:hover {
@@ -193,6 +209,7 @@ h2 {
 
 /* Facebook Login Button */
 .fbSplashPageConnect {
+    text-align: center;
     margin-top: 15px;
 }
 
@@ -201,83 +218,98 @@ h2 {
     background-color: #4f689e;
     color: #fff;
     font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 3px;
+    padding: 4px 8px;
+    border: 1px solid #2d4373;
     font-size: 11px;
+}
+
+.facebook-login span span {
+    display: none;
 }
 
 /* Gray Sign-Up Box */
 #rightArea {
-    width: 450px;
+    width: 440px;
     background-color: #e1e1e1;
-    border: 1px solid #ccc;
-    padding: 20px;
+    border: 1px solid #b8b8b8;
+    padding: 15px;
     text-align: center;
-    margin-top: 15px;
+    margin: 20px auto 0 auto;
 }
 
 .FrontPageLoginBox p.text {
-    font-size: 12px;
-    color: #555;
-    margin-bottom: 5px;
+    font-size: 11px;
+    color: #333;
 }
 
 .FrontPageLoginBox h2 {
     font-size: 22px;
     font-weight: normal;
-    margin-bottom: 15px;
+    margin: 5px 0 10px 0;
 }
 
 .form-select {
-    padding: 3px;
-    margin: 10px 2px 15px 2px;
+    padding: 2px;
+    font-size: 11px;
+    margin: 5px 2px 10px 2px;
 }
 
 .footnote {
     font-size: 10px;
     color: #666;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 /* Guest Play Area */
 #guestarea {
-    text-align: center;
-    border-top: 1px solid #e5e5e5;
-    padding-top: 25px;
-    margin-top: 20px;
+    text-align: left;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+    margin-top: 25px;
 }
 
 #guestarea h2 {
-    font-size: 22px;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+#guestarea p.text {
+    font-size: 12px;
 }
 
 #guestButton {
-    margin-left: 5px;
+    background-color: #0055b3;
+    color: #fff;
+    font-weight: bold;
+    padding: 3px 8px;
+    border: 1px solid #002d62;
+    font-size: 11px;
 }
 
 /* Footer Section */
 .footer-container {
     background-color: #003366;
     color: #fff;
-    padding: 30px 0;
+    padding: 20px 0 30px 0;
     text-align: center;
     margin-top: 40px;
 }
 
 .FooterNav {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+    font-size: 11px;
 }
 
 .FooterNav a {
     color: #fff;
-    margin: 0 4px;
-    font-size: 11px;
+    margin: 0 2px;
 }
 
 .SEOGenreLinks {
     font-size: 10px;
     color: #80a0c0;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .SEOGenreLinks a {
@@ -285,11 +317,24 @@ h2 {
 }
 
 .legal {
-    width: 700px;
+    width: 970px;
     margin: 0 auto;
     font-size: 10px;
-    color: #99b3cc;
-    line-height: 1.4;
+    color: #80a0c0;
+    text-align: left;
+    border-top: 1px solid #002244;
+    padding-top: 10px;
+}
+
+.legal .right {
+    float: right;
+    width: 650px;
+    line-height: 1.3;
+}
+
+.legal .left {
+    float: left;
+    width: 200px;
 }
 
 .legal a {
