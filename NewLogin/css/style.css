@@ -26,7 +26,7 @@ a:hover {
 
 /* Header Navigation Bar */
 .site-header {
-    background: url('../images/RevisedHeader/bg-rbx_header.png') repeat-x top left;
+    background: url('/images/RevisedHeader/bg-rbx_header.png') repeat-x top left;
     height: 40px;
     width: 100%;
 }
@@ -43,9 +43,9 @@ a:hover {
     float: left;
     width: 118px;
     height: 30px;
-    background: url('../images/RevisedHeader/btn-rbx_logo.png') no-repeat 0 0;
+    background: url('/images/RevisedHeader/btn-rbx_logo.png') no-repeat 0 0;
     margin-top: 5px;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .btn-logo:hover {
@@ -78,6 +78,27 @@ a:hover {
     text-decoration: none;
 }
 
+/* Header Control / Dropdown Button */
+.btn-control, #header-login {
+    background: url('/images/button/StyleGuide/btn-control-large-tile.png') repeat-x 0 0;
+    color: #000;
+    padding: 3px 10px;
+    border: 1px solid #777;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 12px;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.btn-control:hover, #header-login:hover {
+    background-position: 0 -30px;
+}
+
+.btn-control:active, #header-login:active {
+    background-position: 0 -60px;
+}
+
 #header-login-container {
     float: right;
     color: #fff;
@@ -88,37 +109,18 @@ a:hover {
 #header-signup {
     color: #fff;
     font-weight: 700;
+    margin-right: 5px;
 }
 
 #header-or {
     color: #ccc;
-    padding: 0 3px;
+    padding-right: 5px;
 }
 
-/* Header Control / Login Button using btn-control-large-tile.png */
-#header-login, .btn-control {
-    background: url('../tttn/images/button/StyleGuide/btn-control-large-tile.png') repeat-x 0 0;
-    color: #000;
-    padding: 3px 10px;
-    border: 1px solid #777;
-    font-weight: 700;
-    cursor: pointer;
-    font-size: 12px;
-    display: inline-block;
-}
-
-#header-login:hover, .btn-control:hover {
-    background-position: 0 -30px;
-}
-
-#header-login:active, .btn-control:active {
-    background-position: 0 -60px;
-}
-
-/* Page Body Layout */
+/* Main Body Container */
 #BodyWrapper {
     width: 970px;
-    margin: 15px auto 0 auto;
+    margin: 20px auto 0 auto;
     text-align: left;
 }
 
@@ -127,7 +129,6 @@ h1 {
     font-weight: 700;
     color: #333;
     margin-bottom: 15px;
-    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
 }
 
 h2 {
@@ -135,62 +136,60 @@ h2 {
     font-weight: 400;
     color: #333;
     margin-bottom: 10px;
-    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
 }
 
-/* Main Split Area */
+/* Left Login Area */
 #loginarea {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    text-align: left;
 }
 
-/* Top Login Form */
 #leftArea {
-    width: 100%;
-    margin-bottom: 15px;
+    width: 320px;
+    text-align: left;
 }
 
 #logintable {
-    margin: 0 auto 10px auto;
+    margin-bottom: 10px;
 }
 
 #logintable td {
-    padding: 3px 5px;
+    padding: 4px 0;
     vertical-align: middle;
 }
 
 .form-label {
     font-weight: 700;
     text-align: right;
-    display: block;
-    font-size: 13px;
+    padding-right: 10px;
+    font-size: 12px;
+    width: 80px;
 }
 
 .text-box {
-    width: 190px;
+    width: 200px;
     padding: 3px;
     border: 1px solid #a7a6aa;
-    font-size: 13px;
+    font-size: 12px;
     font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
 }
 
 #signInButtonPanel {
-    width: 320px;
-    margin: 0 auto;
-    text-align: right;
+    padding-left: 90px;
+    margin-top: 5px;
 }
 
 #forgotPasswordPanel {
-    float: left;
-    padding-top: 5px;
-    padding-left: 55px;
+    margin-top: 8px;
+    font-size: 11px;
 }
 
-/* Custom Blue Roblox Button using bg-btn-blue.png */
+/* Blue Gradient Buttons (Sign In & Play as Guest) */
 .btn-neutral, #signInButtonPanel .btn-neutral, #guestButton {
-    background: url('../tttn/images/button/StyleGuide/bg-btn-blue.png') repeat-x 0 0;
+    background: url('/images/button/StyleGuide/bg-btn-blue.png') repeat-x 0 0;
     color: #fff;
     font-weight: 700;
-    padding: 6px 14px;
+    padding: 5px 16px;
     border: 1px solid #002d62;
     font-size: 13px;
     cursor: pointer;
@@ -208,12 +207,12 @@ h2 {
     background-position: 0 -70px;
 }
 
-/* Custom Green Roblox Button using bg-btn-green.png */
+/* Green Gradient Button (Sign Up) */
 .btn-primary {
-    background: url('../tttn/images/button/StyleGuide/bg-btn-green.png') repeat-x 0 0;
+    background: url('/images/button/StyleGuide/bg-btn-green.png') repeat-x 0 0;
     color: #fff;
     font-weight: 700;
-    padding: 6px 18px;
+    padding: 6px 20px;
     border: 1px solid #004d00;
     font-size: 15px;
     cursor: pointer;
@@ -231,27 +230,26 @@ h2 {
     background-position: 0 -70px;
 }
 
-/* Classic Roblox Facebook Login Button Assembly */
+/* Facebook Login Button */
 .fbSplashPageConnect {
-    text-align: center;
     margin-top: 15px;
+    margin-left: 90px;
 }
 
 .facebook-login {
     display: inline-block;
     height: 22px;
     line-height: 22px;
-    background: url('../tttn/images/facebook/bg-fblogin_sides.png') no-repeat 0 0;
-    padding-left: 24px; /* Room for the FB logo on the left side sprite */
+    background: url('/images/facebook/bg-fblogin_sides.png') no-repeat 0 0;
+    padding-left: 24px;
     cursor: pointer;
-    vertical-align: middle;
 }
 
 .facebook-login span {
     display: block;
     height: 22px;
     line-height: 22px;
-    background: url('../tttn/images/facebook/bg-fblogin_sides.png') no-repeat right -44px;
+    background: url('/images/facebook/bg-fblogin_sides.png') no-repeat right -44px;
     padding-right: 6px;
 }
 
@@ -259,9 +257,9 @@ h2 {
     display: block;
     height: 22px;
     line-height: 22px;
-    background: url('../tttn/images/facebook/bg-fblogin_middle.png') repeat-x 0 0;
+    background: url('/images/facebook/bg-fblogin_middle.png') repeat-x 0 0;
     color: #fff;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 11px;
     padding: 0 4px;
     text-shadow: 0 -1px 0 #1d2f5a;
@@ -281,36 +279,35 @@ h2 {
 
 /* Gray Sign-Up Box */
 #rightArea {
-    width: 440px;
+    width: 280px;
     background-color: #e1e1e1;
     border: 1px solid #b8b8b8;
-    padding: 15px;
+    padding: 15px 20px;
     text-align: center;
-    margin: 20px auto 0 auto;
+    margin: 25px 0 0 90px;
 }
 
 .FrontPageLoginBox p.text {
-    font-size: 12px;
+    font-size: 11px;
     color: #333;
 }
 
 .FrontPageLoginBox h2 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
     margin: 5px 0 10px 0;
 }
 
 .form-select {
     padding: 2px;
-    font-size: 12px;
+    font-size: 11px;
     margin: 5px 2px 10px 2px;
-    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
 }
 
 .footnote {
-    font-size: 11px;
+    font-size: 10px;
     color: #666;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 /* Guest Play Area */
@@ -324,11 +321,12 @@ h2 {
 #guestarea h2 {
     font-size: 18px;
     font-weight: 400;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 #guestarea p.text {
-    font-size: 13px;
+    font-size: 12px;
+    margin-bottom: 10px;
 }
 
 /* Footer Section */
@@ -342,7 +340,7 @@ h2 {
 
 .FooterNav {
     margin-bottom: 8px;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .FooterNav a {
@@ -351,7 +349,7 @@ h2 {
 }
 
 .SEOGenreLinks {
-    font-size: 11px;
+    font-size: 10px;
     color: #80a0c0;
     margin-bottom: 15px;
 }
@@ -363,7 +361,7 @@ h2 {
 .legal {
     width: 970px;
     margin: 0 auto;
-    font-size: 11px;
+    font-size: 10px;
     color: #80a0c0;
     text-align: left;
     border-top: 1px solid #002244;
