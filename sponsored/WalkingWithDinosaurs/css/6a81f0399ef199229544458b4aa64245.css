@@ -1,0 +1,170 @@
+#SponsoredPage {
+position: relative;
+top: 40px;
+left: -50px;
+margin-bottom: 180px;
+}
+
+#SponsoredPage .title{display:none;}
+
+#SponsoredPage .description{
+padding: 40px 110px 5px 25px;
+color: #fff;
+font-size: 12px;
+}
+
+#SponsoredPage .iframe-container{
+background:url('https://web.archive.org/web/20131206224931im_/https://s3.amazonaws.com/images.roblox.com/4587ab18133950deb18fb542e5fc3a3f');
+padding: 45px 0px 5px 10px;
+width: 1063px;
+margin-bottom: 5px;
+height:690px;
+overflow:hidden;
+}
+
+#SponsoredPage .iframe-container:after {
+content: "";
+position: relative;
+top: -117px;
+display: block;
+width: 1050px;
+height: 14px;
+background-position: center;
+background-image: url('https://web.archive.org/web/20131206224931im_/https://s3.amazonaws.com/images.roblox.com/4587ab18133950deb18fb542e5fc3a3f');
+}
+
+#SponsoredPage .video-container{
+background:url('https://web.archive.org/web/20131206224931im_/https://s3.amazonaws.com/images.roblox.com/c53ca35d6efc996cbe5bf466615465ab');
+padding: 42px 5px 5px 11px;
+height: 319px;
+width: 568px;
+margin-top: 25px;
+}
+
+#SponsoredPage .iframe-container iframe{
+width:1050px;
+height:800px;
+}
+
+#SponsoredPage .logo{
+background:url('https://web.archive.org/web/20131206224931im_/https://s3.amazonaws.com/images.roblox.com/6b3d9035a735e645ff1709b4445834e9');
+height: 350px;
+width: 1348px;
+position: relative;
+top: -76px;
+left: -265px;
+}
+
+#SponsoredPage .game-container {
+background: url('https://web.archive.org/web/20131206224931im_/https://s3.amazonaws.com/images.roblox.com/3e45ce2cdc27ef535990165812e67daf');
+width: 330px;
+height: 198px;
+position: relative;
+bottom: -62px;
+right: -104px;
+padding-left: 50px;
+padding-top: 20px;
+}
+
+#SponsoredPage .game-container  div .roblox-place-image div a img{
+width:85%;
+}
+
+#SponsoredPage .game-container  .play-button-container{
+display: none;
+}
+
+#SponsoredPage .prizes-container{
+background:url('https://web.archive.org/web/20131206224931im_/https://s3.amazonaws.com/images.roblox.com/16b74b4f2b06abff822ac285b05ffa92');
+width: 381px;
+height: 240px;
+position: relative;
+bottom: -94px;
+right: -104px;
+}
+
+#SponsoredPage .prizes-container .pager-container .content-outer{
+overflow: visible !important;
+}
+
+#SponsoredPage .pager-container{
+height: 140px;
+width: 300px;
+position: relative;
+top: 30px;
+left: 15px;
+}
+
+#SponsoredPage .pager-container .item-container{
+width:250px;
+height:140px;
+float:left;
+margin-left:10px;
+margin-right: -150px;
+}
+
+#SponsoredPage .pager-container .item-container .name{
+text-align:center;
+font-weight:bold;
+}
+#SponsoredPage .pager-container .item-container .name a{
+color:#000;
+display: block;
+width: 100px;
+}
+#SponsoredPage .pager-container .item-container:hover a{
+color:#ff9900;
+}
+#SponsoredPage .pager-container .item-container .name a:hover{
+text-decoration:none;
+}
+
+#SponsoredPage .right-column{
+position: absolute;
+bottom: 15px;
+right: 0;
+}
+
+.sponsored-ad-container{
+display: none;
+}
+
+.sponsored-ad-container .sponsored-ad-banner{
+display: none;
+}
+
+.sponsored-ad-container .sponsored-ad-rectangle{
+display: none;
+}
+
+#MasterContainer{
+position:relative;
+background:url('https://web.archive.org/web/20131206224931im_/https://s3.amazonaws.com/images.roblox.com/2adfa2fd31adc0176be5d10e312c9c41') center 30px #000 no-repeat fixed !important;
+}
+#BodyWrapper,#Body{
+background:none;
+}
+#Body{
+width:970px;
+}
+#testingSitePanelWrapper{display:none;}
+/*
+     FILE ARCHIVED ON 22:49:31 Dec 06, 2013 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 08:55:56 Sep 26, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.375
+  exclusion.robots: 0.044
+  exclusion.robots.policy: 0.036
+  esindex: 0.005
+  cdx.remote: 13.652
+  LoadShardBlock: 85.575 (3)
+  PetaboxLoader3.datanode: 82.577 (4)
+  PetaboxLoader3.resolve: 50.826 (2)
+  load_resource: 79.343
+*/
