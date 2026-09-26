@@ -1,5 +1,5 @@
 /* Import Source Sans Pro */
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
 
 /* Reset & Base Styles */
 * {
@@ -10,7 +10,8 @@
 
 body {
     font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 13px;
+    font-weight: 400;
     color: #333;
     background-color: #fff;
 }
@@ -66,8 +67,8 @@ a:hover {
 
 #navigation-menu li a {
     color: #fff;
-    font-weight: 700;
-    font-size: 12px;
+    font-weight: 600;
+    font-size: 13px;
     padding: 12px 10px;
     display: block;
     line-height: 1;
@@ -78,7 +79,7 @@ a:hover {
     text-decoration: none;
 }
 
-/* Header Control / Dropdown Button (More ▼ / Login ▼) */
+/* Header Control / Dropdown Button */
 .btn-control, #header-login {
     background: url('/images/Buttons/StyleGuide/btn-control-large-tile.png') repeat-x 0 0;
     color: #000;
@@ -93,10 +94,6 @@ a:hover {
 
 .btn-control:hover, #header-login:hover {
     background-position: 0 -30px;
-}
-
-.btn-control:active, #header-login:active {
-    background-position: 0 -60px;
 }
 
 #header-login-container {
@@ -120,25 +117,27 @@ a:hover {
 /* Main Body Container */
 #BodyWrapper {
     width: 970px;
-    margin: 25px auto 0 auto;
+    margin: 20px auto 0 auto;
     text-align: left;
 }
 
+/* Title: Moved to far left edge */
 h1 {
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 700;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    margin-left: -15px; /* Alignment shift toward left edge */
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 400;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
-/* Two-Column Main Layout */
+/* Two-Column Layout */
 #loginarea {
     margin-bottom: 30px;
     width: 100%;
@@ -150,17 +149,17 @@ h2 {
     clear: both;
 }
 
-/* Left Column: Form & Facebook Login */
+/* Left Column */
 #leftArea {
     float: left;
-    width: 480px;
-    padding-right: 30px;
+    width: 470px;
+    padding-right: 20px;
     border-right: 1px solid #e0e0e0;
     min-height: 250px;
 }
 
 #logintable {
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 #logintable td {
@@ -169,36 +168,44 @@ h2 {
 }
 
 .form-label {
-    font-weight: 700;
+    font-weight: 600;
     text-align: right;
     padding-right: 12px;
-    font-size: 12px;
+    font-size: 13px;
     width: 90px;
 }
 
+/* Longer Input Text Boxes */
 .text-box {
-    width: 220px;
-    padding: 4px;
+    width: 280px; /* Made longer */
+    height: 26px;
+    padding: 3px 6px;
     border: 1px solid #a7a6aa;
     font-size: 13px;
     font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
 }
 
+/* Position Sign In Button right aligned under inputs */
 #signInButtonPanel {
-    padding-left: 102px;
-    margin-top: 5px;
+    padding-left: 205px; /* Shifted to match arrow location */
+    margin-top: 10px;
 }
 
 #forgotPasswordPanel {
     margin-top: 10px;
     padding-left: 0;
-    font-size: 11px;
+    font-size: 12px;
+}
+
+/* Hide unwanted Cancel button next to Sign In */
+#btn-cancel, .btn-cancel, button[value="Cancel"], input[value="Cancel"] {
+    display: none !important;
 }
 
 /* Right Column: Gray Sign-Up Box */
 #rightArea {
     float: right;
-    width: 440px;
+    width: 450px;
 }
 
 .FrontPageLoginBox {
@@ -209,19 +216,20 @@ h2 {
 }
 
 .FrontPageLoginBox p.text {
-    font-size: 12px;
+    font-size: 13px;
+    font-weight: 400;
     color: #333;
 }
 
 .FrontPageLoginBox h2 {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 400;
     margin: 8px 0 15px 0;
 }
 
 .form-select {
-    padding: 3px;
-    font-size: 12px;
+    padding: 3px 5px;
+    font-size: 13px;
     margin: 5px 2px 15px 2px;
     font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
 }
@@ -232,12 +240,14 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* Custom Blue Gradient Button (Sign In & Play as Guest) */
-.btn-neutral, #signInButtonPanel .btn-neutral, #guestButton {
+/* Blue Sign In Button */
+.btn-neutral, #signInButtonPanel .btn-neutral {
     background: url('/images/Buttons/StyleGuide/bg-btn-blue.png') repeat-x 0 0;
     color: #fff;
     font-weight: 700;
-    padding: 6px 18px;
+    height: 28px;
+    line-height: 26px;
+    padding: 0 18px;
     border: 1px solid #002d62;
     font-size: 14px;
     cursor: pointer;
@@ -247,23 +257,47 @@ h2 {
     border-radius: 2px;
 }
 
-.btn-neutral:hover, #signInButtonPanel .btn-neutral:hover, #guestButton:hover {
+.btn-neutral:hover, #signInButtonPanel .btn-neutral:hover {
     background-position: 0 -35px;
     text-decoration: none;
 }
 
-.btn-neutral:active, #signInButtonPanel .btn-neutral:active, #guestButton:active {
+.btn-neutral:active, #signInButtonPanel .btn-neutral:active {
     background-position: 0 -70px;
 }
 
-/* Custom Green Gradient Button (Sign Up) */
+/* Smaller "Play as Guest" Button */
+#guestButton {
+    background: url('/images/Buttons/StyleGuide/bg-btn-blue.png') repeat-x 0 0;
+    color: #fff;
+    font-weight: 700;
+    height: 24px;
+    line-height: 22px;
+    padding: 0 12px;
+    border: 1px solid #002d62;
+    font-size: 12px; /* Smaller font size */
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+}
+
+#guestButton:hover {
+    background-position: 0 -35px;
+    text-decoration: none;
+}
+
+/* Green "Sign Up" Button: Bigger Text & Proportionate Height */
 .btn-primary {
     background: url('/images/Buttons/StyleGuide/bg-btn-green.png') repeat-x 0 0;
     color: #fff;
     font-weight: 700;
-    padding: 8px 24px;
+    height: 36px;
+    line-height: 34px;
+    padding: 0 28px;
     border: 1px solid #004d00;
-    font-size: 16px;
+    font-size: 18px; /* Bigger text */
     cursor: pointer;
     display: inline-block;
     font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
@@ -280,51 +314,55 @@ h2 {
     background-position: 0 -70px;
 }
 
-/* Facebook Login Button Slicing (Kept in /images/facebook/) */
+/* Completely Fixed Facebook Login Button Slicing */
 .fbSplashPageConnect {
     margin-top: 25px;
     margin-left: 102px;
+    display: block;
+    clear: both;
 }
 
 .facebook-login {
-    display: inline-block;
-    height: 22px;
-    line-height: 22px;
-    background: url('/images/facebook/bg-fblogin_sides.png') no-repeat 0 0;
-    padding-left: 24px;
+    display: inline-block !important;
+    height: 22px !important;
+    line-height: 22px !important;
+    background: url('/images/facebook/bg-fblogin_sides.png') no-repeat 0 0 !important;
+    padding-left: 24px !important;
     cursor: pointer;
+    text-decoration: none !important;
+    vertical-align: middle;
 }
 
 .facebook-login span {
-    display: block;
-    height: 22px;
-    line-height: 22px;
-    background: url('/images/facebook/bg-fblogin_sides.png') no-repeat right -44px;
-    padding-right: 6px;
+    display: block !important;
+    height: 22px !important;
+    line-height: 22px !important;
+    background: url('/images/facebook/bg-fblogin_sides.png') no-repeat right -44px !important;
+    padding-right: 6px !important;
 }
 
 .facebook-login span span {
-    display: block;
-    height: 22px;
-    line-height: 22px;
-    background: url('/images/facebook/bg-fblogin_middle.png') repeat-x 0 0;
-    color: #fff;
-    font-weight: 700;
-    font-size: 11px;
-    padding: 0 6px;
+    display: block !important;
+    height: 22px !important;
+    line-height: 22px !important;
+    background: url('/images/facebook/bg-fblogin_middle.png') repeat-x 0 0 !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+    font-size: 11px !important;
+    padding: 0 6px !important;
     text-shadow: 0 -1px 0 #1d2f5a;
 }
 
 .facebook-login:hover {
-    background-position: 0 -22px;
+    background-position: 0 -22px !important;
 }
 
 .facebook-login:hover span {
-    background-position: right -66px;
+    background-position: right -66px !important;
 }
 
 .facebook-login:hover span span {
-    background-position: 0 -22px;
+    background-position: 0 -22px !important;
 }
 
 /* Guest Play Area */
@@ -332,7 +370,7 @@ h2 {
     text-align: left;
     border-top: 1px solid #e0e0e0;
     padding-top: 20px;
-    margin-top: 10px;
+    margin-top: 20px;
     clear: both;
 }
 
@@ -344,6 +382,7 @@ h2 {
 
 #guestarea p.text {
     font-size: 13px;
+    font-weight: 400;
     margin-bottom: 12px;
     display: inline-block;
     margin-right: 8px;
