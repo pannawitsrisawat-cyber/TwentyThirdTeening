@@ -3,7 +3,7 @@
 
 /* Reset & Base Styles */
 * {
-    box-sizing: content-box;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -78,9 +78,9 @@ a:hover {
     text-decoration: none;
 }
 
-/* Header Control / Dropdown Button */
+/* Header Control / Dropdown Button (More ▼ / Login ▼) */
 .btn-control, #header-login {
-    background: url('/images/button/StyleGuide/btn-control-large-tile.png') repeat-x 0 0;
+    background: url('/images/buttons/StyleGuide/btn-control-large-tile.png') repeat-x 0 0;
     color: #000;
     padding: 3px 10px;
     border: 1px solid #777;
@@ -120,15 +120,15 @@ a:hover {
 /* Main Body Container */
 #BodyWrapper {
     width: 970px;
-    margin: 20px auto 0 auto;
+    margin: 25px auto 0 auto;
     text-align: left;
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 700;
     color: #333;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -138,64 +138,113 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* Left Login Area */
+/* Two-Column Main Layout */
 #loginarea {
-    margin-bottom: 25px;
-    text-align: left;
+    margin-bottom: 30px;
+    width: 100%;
 }
 
+#loginarea::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Left Column: Form & Facebook Login */
 #leftArea {
-    width: 320px;
-    text-align: left;
+    float: left;
+    width: 480px;
+    padding-right: 30px;
+    border-right: 1px solid #e0e0e0;
+    min-height: 250px;
 }
 
 #logintable {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 #logintable td {
-    padding: 4px 0;
+    padding: 6px 0;
     vertical-align: middle;
 }
 
 .form-label {
     font-weight: 700;
     text-align: right;
-    padding-right: 10px;
+    padding-right: 12px;
     font-size: 12px;
-    width: 80px;
+    width: 90px;
 }
 
 .text-box {
-    width: 200px;
-    padding: 3px;
+    width: 220px;
+    padding: 4px;
     border: 1px solid #a7a6aa;
-    font-size: 12px;
+    font-size: 13px;
     font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
 }
 
 #signInButtonPanel {
-    padding-left: 90px;
+    padding-left: 102px;
     margin-top: 5px;
 }
 
 #forgotPasswordPanel {
-    margin-top: 8px;
+    margin-top: 10px;
+    padding-left: 0;
     font-size: 11px;
 }
 
-/* Blue Gradient Buttons (Sign In & Play as Guest) */
+/* Right Column: Gray Sign-Up Box */
+#rightArea {
+    float: right;
+    width: 440px;
+}
+
+.FrontPageLoginBox {
+    background-color: #e3e3e3;
+    border: 1px solid #b8b8b8;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.FrontPageLoginBox p.text {
+    font-size: 12px;
+    color: #333;
+}
+
+.FrontPageLoginBox h2 {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 8px 0 15px 0;
+}
+
+.form-select {
+    padding: 3px;
+    font-size: 12px;
+    margin: 5px 2px 15px 2px;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+}
+
+.footnote {
+    font-size: 11px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Custom Blue Gradient Button (Sign In & Play as Guest) */
 .btn-neutral, #signInButtonPanel .btn-neutral, #guestButton {
-    background: url('/images/button/StyleGuide/bg-btn-blue.png') repeat-x 0 0;
+    background: url('/images/buttons/StyleGuide/bg-btn-blue.png') repeat-x 0 0;
     color: #fff;
     font-weight: 700;
-    padding: 5px 16px;
+    padding: 6px 18px;
     border: 1px solid #002d62;
-    font-size: 13px;
+    font-size: 14px;
     cursor: pointer;
     display: inline-block;
     font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
 }
 
 .btn-neutral:hover, #signInButtonPanel .btn-neutral:hover, #guestButton:hover {
@@ -207,18 +256,19 @@ h2 {
     background-position: 0 -70px;
 }
 
-/* Green Gradient Button (Sign Up) */
+/* Custom Green Gradient Button (Sign Up) */
 .btn-primary {
-    background: url('/images/button/StyleGuide/bg-btn-green.png') repeat-x 0 0;
+    background: url('/images/buttons/StyleGuide/bg-btn-green.png') repeat-x 0 0;
     color: #fff;
     font-weight: 700;
-    padding: 6px 20px;
+    padding: 8px 24px;
     border: 1px solid #004d00;
-    font-size: 15px;
+    font-size: 16px;
     cursor: pointer;
     display: inline-block;
     font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
 }
 
 .btn-primary:hover {
@@ -230,10 +280,10 @@ h2 {
     background-position: 0 -70px;
 }
 
-/* Facebook Login Button */
+/* Facebook Login Button Slicing */
 .fbSplashPageConnect {
-    margin-top: 15px;
-    margin-left: 90px;
+    margin-top: 25px;
+    margin-left: 102px;
 }
 
 .facebook-login {
@@ -261,7 +311,7 @@ h2 {
     color: #fff;
     font-weight: 700;
     font-size: 11px;
-    padding: 0 4px;
+    padding: 0 6px;
     text-shadow: 0 -1px 0 #1d2f5a;
 }
 
@@ -277,56 +327,26 @@ h2 {
     background-position: 0 -22px;
 }
 
-/* Gray Sign-Up Box */
-#rightArea {
-    width: 280px;
-    background-color: #e1e1e1;
-    border: 1px solid #b8b8b8;
-    padding: 15px 20px;
-    text-align: center;
-    margin: 25px 0 0 90px;
-}
-
-.FrontPageLoginBox p.text {
-    font-size: 11px;
-    color: #333;
-}
-
-.FrontPageLoginBox h2 {
-    font-size: 20px;
-    font-weight: 400;
-    margin: 5px 0 10px 0;
-}
-
-.form-select {
-    padding: 2px;
-    font-size: 11px;
-    margin: 5px 2px 10px 2px;
-}
-
-.footnote {
-    font-size: 10px;
-    color: #666;
-    margin-bottom: 12px;
-}
-
 /* Guest Play Area */
 #guestarea {
     text-align: left;
-    border-top: 1px solid #ccc;
-    padding-top: 15px;
-    margin-top: 25px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 20px;
+    margin-top: 10px;
+    clear: both;
 }
 
 #guestarea h2 {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 400;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 #guestarea p.text {
-    font-size: 12px;
-    margin-bottom: 10px;
+    font-size: 13px;
+    margin-bottom: 12px;
+    display: inline-block;
+    margin-right: 8px;
 }
 
 /* Footer Section */
@@ -335,7 +355,7 @@ h2 {
     color: #fff;
     padding: 20px 0 30px 0;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .FooterNav {
@@ -345,7 +365,7 @@ h2 {
 
 .FooterNav a {
     color: #fff;
-    margin: 0 2px;
+    margin: 0 3px;
 }
 
 .SEOGenreLinks {
