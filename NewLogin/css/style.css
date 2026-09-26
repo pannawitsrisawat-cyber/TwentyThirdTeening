@@ -1,5 +1,5 @@
-/* Import ฟอนต์ Builder Sans จาก CDN */
-@import url('https://fonts.cdnfonts.com/css/builder-sans');
+/* Import Source Sans Pro */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 /* Reset & Base Styles */
 * {
@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: 'Builder Sans', Arial, Helvetica, sans-serif;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
     font-size: 12px;
     color: #333;
     background-color: #fff;
@@ -66,9 +66,9 @@ a:hover {
 
 #navigation-menu li a {
     color: #fff;
-    font-weight: bold;
-    font-size: 11px;
-    padding: 13px 10px;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 12px 10px;
     display: block;
     line-height: 1;
 }
@@ -82,12 +82,12 @@ a:hover {
     float: right;
     color: #fff;
     padding-top: 8px;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 #header-signup {
     color: #fff;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 #header-or {
@@ -95,14 +95,24 @@ a:hover {
     padding: 0 3px;
 }
 
-#header-login {
-    background-color: #e1e1e1;
+/* Header Control / Login Button using btn-control-large-tile.png */
+#header-login, .btn-control {
+    background: url('../tttn/images/button/StyleGuide/btn-control-large-tile.png') repeat-x 0 0;
     color: #000;
-    padding: 3px 8px;
+    padding: 3px 10px;
     border: 1px solid #777;
-    font-weight: bold;
+    font-weight: 700;
     cursor: pointer;
-    font-size: 11px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+#header-login:hover, .btn-control:hover {
+    background-position: 0 -30px;
+}
+
+#header-login:active, .btn-control:active {
+    background-position: 0 -60px;
 }
 
 /* Page Body Layout */
@@ -114,18 +124,18 @@ a:hover {
 
 h1 {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
     color: #333;
     margin-bottom: 15px;
-    font-family: 'Builder Sans', Arial, Helvetica, sans-serif;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
 }
 
 h2 {
     font-size: 20px;
-    font-weight: normal;
+    font-weight: 400;
     color: #333;
     margin-bottom: 10px;
-    font-family: 'Builder Sans', Arial, Helvetica, sans-serif;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
 }
 
 /* Main Split Area */
@@ -149,17 +159,18 @@ h2 {
 }
 
 .form-label {
-    font-weight: bold;
+    font-weight: 700;
     text-align: right;
     display: block;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .text-box {
     width: 190px;
     padding: 3px;
     border: 1px solid #a7a6aa;
-    font-size: 12px;
+    font-size: 13px;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
 }
 
 #signInButtonPanel {
@@ -174,40 +185,53 @@ h2 {
     padding-left: 55px;
 }
 
-/* Custom Roblox Buttons */
-.btn-neutral, #signInButtonPanel .btn-neutral {
-    background: #0055b3;
+/* Custom Blue Roblox Button using bg-btn-blue.png */
+.btn-neutral, #signInButtonPanel .btn-neutral, #guestButton {
+    background: url('../tttn/images/button/StyleGuide/bg-btn-blue.png') repeat-x 0 0;
     color: #fff;
-    font-weight: bold;
+    font-weight: 700;
     padding: 6px 14px;
     border: 1px solid #002d62;
     font-size: 13px;
     cursor: pointer;
     display: inline-block;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
 }
 
-.btn-neutral:hover {
-    background-color: #004088;
+.btn-neutral:hover, #signInButtonPanel .btn-neutral:hover, #guestButton:hover {
+    background-position: 0 -35px;
     text-decoration: none;
 }
 
+.btn-neutral:active, #signInButtonPanel .btn-neutral:active, #guestButton:active {
+    background-position: 0 -70px;
+}
+
+/* Custom Green Roblox Button using bg-btn-green.png */
 .btn-primary {
-    background: #008a00;
+    background: url('../tttn/images/button/StyleGuide/bg-btn-green.png') repeat-x 0 0;
     color: #fff;
-    font-weight: bold;
+    font-weight: 700;
     padding: 6px 18px;
     border: 1px solid #004d00;
-    font-size: 14px;
+    font-size: 15px;
     cursor: pointer;
     display: inline-block;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
 }
 
 .btn-primary:hover {
-    background-color: #006600;
+    background-position: 0 -35px;
     text-decoration: none;
 }
 
-/* Facebook Login Button */
+.btn-primary:active {
+    background-position: 0 -70px;
+}
+
+/* Classic Roblox Facebook Login Button Assembly */
 .fbSplashPageConnect {
     text-align: center;
     margin-top: 15px;
@@ -215,16 +239,44 @@ h2 {
 
 .facebook-login {
     display: inline-block;
-    background-color: #4f689e;
-    color: #fff;
-    font-weight: bold;
-    padding: 4px 8px;
-    border: 1px solid #2d4373;
-    font-size: 11px;
+    height: 22px;
+    line-height: 22px;
+    background: url('../tttn/images/facebook/bg-fblogin_sides.png') no-repeat 0 0;
+    padding-left: 24px; /* Room for the FB logo on the left side sprite */
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.facebook-login span {
+    display: block;
+    height: 22px;
+    line-height: 22px;
+    background: url('../tttn/images/facebook/bg-fblogin_sides.png') no-repeat right -44px;
+    padding-right: 6px;
 }
 
 .facebook-login span span {
-    display: none;
+    display: block;
+    height: 22px;
+    line-height: 22px;
+    background: url('../tttn/images/facebook/bg-fblogin_middle.png') repeat-x 0 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 0 4px;
+    text-shadow: 0 -1px 0 #1d2f5a;
+}
+
+.facebook-login:hover {
+    background-position: 0 -22px;
+}
+
+.facebook-login:hover span {
+    background-position: right -66px;
+}
+
+.facebook-login:hover span span {
+    background-position: 0 -22px;
 }
 
 /* Gray Sign-Up Box */
@@ -238,24 +290,25 @@ h2 {
 }
 
 .FrontPageLoginBox p.text {
-    font-size: 11px;
+    font-size: 12px;
     color: #333;
 }
 
 .FrontPageLoginBox h2 {
     font-size: 22px;
-    font-weight: normal;
+    font-weight: 400;
     margin: 5px 0 10px 0;
 }
 
 .form-select {
     padding: 2px;
-    font-size: 11px;
+    font-size: 12px;
     margin: 5px 2px 10px 2px;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
 }
 
 .footnote {
-    font-size: 10px;
+    font-size: 11px;
     color: #666;
     margin-bottom: 10px;
 }
@@ -270,21 +323,12 @@ h2 {
 
 #guestarea h2 {
     font-size: 18px;
-    font-weight: normal;
+    font-weight: 400;
     margin-bottom: 10px;
 }
 
 #guestarea p.text {
-    font-size: 12px;
-}
-
-#guestButton {
-    background-color: #0055b3;
-    color: #fff;
-    font-weight: bold;
-    padding: 3px 8px;
-    border: 1px solid #002d62;
-    font-size: 11px;
+    font-size: 13px;
 }
 
 /* Footer Section */
@@ -298,7 +342,7 @@ h2 {
 
 .FooterNav {
     margin-bottom: 8px;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .FooterNav a {
@@ -307,7 +351,7 @@ h2 {
 }
 
 .SEOGenreLinks {
-    font-size: 10px;
+    font-size: 11px;
     color: #80a0c0;
     margin-bottom: 15px;
 }
@@ -319,7 +363,7 @@ h2 {
 .legal {
     width: 970px;
     margin: 0 auto;
-    font-size: 10px;
+    font-size: 11px;
     color: #80a0c0;
     text-align: left;
     border-top: 1px solid #002244;
